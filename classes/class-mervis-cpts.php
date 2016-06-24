@@ -6,7 +6,7 @@
  * A class definition that includes attributes and functions used across both the
  * public-facing side of the site and the admin area.
  *
- * @link 		http://example.com
+ * @link 		https://www.mervis.com
  * @since 		1.0.0
  *
  * @package 	Mervis_CPTS
@@ -26,9 +26,9 @@
  * @package 	Mervis_CPTS
  * @subpackage 	Mervis_CPTS/classes
  * @author 		DCC Marketing <web@dccmarketing.com>
- * http://example.com
+ * https://www.mervis.com
  */
-class Mervis_CPTS_Plugin_Name {
+class Mervis_CPTS_Mervis_CPTS {
 
 	/**
 	 * The current version of the plugin.
@@ -62,10 +62,10 @@ class Mervis_CPTS_Plugin_Name {
 
 		$this->load_dependencies();
 		$this->set_locale();
-		$this->define_admin_hooks();
-		$this->define_public_hooks();
-		$this->define_template_hooks();
-		$this->define_metabox_hooks();
+		//$this->define_admin_hooks();
+		//$this->define_public_hooks();
+		//$this->define_template_hooks();
+		//$this->define_metabox_hooks();
 		$this->define_cpt_and_tax_hooks();
 
 	} // __construct()
@@ -131,18 +131,21 @@ class Mervis_CPTS_Plugin_Name {
 	 */
 	private function define_cpt_and_tax_hooks() {
 
-		$plugin_cpt_posttypename = new Mervis_CPTS_CPT_PostTypeName();
+		$plugin_cpt_locations 		= new Mervis_CPTS_CPT_Locations();
+		$plugin_cpt_notifications 	= new Mervis_CPTS_CPT_Notifications();
+		$plugin_cpt_offers 			= new Mervis_CPTS_CPT_Offers();
+		$plugin_cpt_pricing 		= new Mervis_CPTS_CPT_Pricing();
 
-		$this->loader->action( 'init', $plugin_cpt_posttypename, 'new_cpt_posttypename' );
-		$this->loader->filter( 'manage_posttypename_posts_columns', $plugin_cpt_posttypename, 'posttypename_register_columns' );
-		$this->loader->action( 'manage_posttypename_posts_custom_column', $plugin_cpt_posttypename, 'posttypename_column_content', 10, 2 );
-		$this->loader->filter( 'manage_edit-posttypename_sortable_columns', $plugin_cpt_posttypename, 'posttypename_sortable_columns', 10, 1 );
-		$this->loader->action( 'request', $plugin_cpt_posttypename, 'posttypename_order_sorting', 10, 2 );
-		$this->loader->action( 'init', $plugin_cpt_posttypename, 'add_image_sizes' );
+		$this->loader->action( 'init', $plugin_cpt_locations, 'new_cpt_locations' );
+		$this->loader->action( 'init', $plugin_cpt_notifications, 'new_cpt_notifications' );
+		$this->loader->action( 'init', $plugin_cpt_offers, 'new_cpt_offers' );
+		$this->loader->action( 'init', $plugin_cpt_pricing, 'new_cpt_pricing' );
 
-		$plugin_tax_taxonomyname =new Mervis_CPTS_Tax_TaxonomyName();
 
-		$this->loader->action( 'init', $plugin_tax_taxonomyname, 'new_taxonomy_taxonomyname' );
+
+		$plugin_tax_projectcat = new Mervis_CPTS_Tax_ProjectCat();
+
+		$this->loader->action( 'init', $plugin_tax_projectcat, 'new_taxonomy_projectcat' );
 
 	} // define_cpt_and_tax_hooks()
 

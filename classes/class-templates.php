@@ -2,7 +2,7 @@
 /**
  * Template-related functions
  *
- * @link 		http://example.com
+ * @link 		https://www.mervis.com
  * @since 		1.0.0
  *
  * @package		Mervis_CPTS
@@ -28,7 +28,7 @@ if ( ! function_exists( 'MERVIS_CPTS_templates' ) ) {
 /**
  * The public-facing functionality of the plugin.
  *
- * @link 		http://example.com
+ * @link 		https://www.mervis.com
  * @since 		1.0.0
  *
  * @package 	Mervis_CPTS

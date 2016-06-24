@@ -3,7 +3,7 @@
 /**
  * The plugin bootstrap file
  *
- * @link 				http://example.com
+ * @link 				https://www.mervis.com
  * @since 				1.0.0
  * @package 			Mervis_CPTS
  *
@@ -57,7 +57,7 @@ if ( ! function_exists( 'MERVIS_CPTS_autoloader' ) ) :
 		/**
 		 * MERVIS_CPTS_autoloader_paths filter
 		 */
-		$paths = apply_filters( 'function-names-autoloader-paths', $paths );
+		$paths = apply_filters( 'mervis-cpts-autoloader-paths', $paths );
 
 		foreach ( $paths as $path ) :
 
@@ -100,7 +100,7 @@ if ( ! function_exists( 'plugin_name' ) ) :
 	 */
 	function plugin_name() {
 
-		return Mervis_CPTS_Plugin_Name::get_instance();
+		return Mervis_CPTS_Mervis_CPTS::get_instance();
 
 	}
 

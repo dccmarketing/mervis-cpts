@@ -1,6 +1,6 @@
 === Plugin Name ===
 Contributors: slushman, dccmarketing
-Donate link: http://example.com/
+Donate link: https://www.mervis.com/
 Tags: comments, spam
 Requires at least: 3.0.1
 Tested up to: 4.5

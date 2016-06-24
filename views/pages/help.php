@@ -3,7 +3,7 @@
 /**
  * The view for the help page
  *
- * @link       http://example.com
+ * @link       https://www.mervis.com
  * @since      1.0.0
  *
  * @package    Mervis_CPTS

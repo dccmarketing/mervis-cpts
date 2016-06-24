@@ -5,14 +5,14 @@
  *
  * Defines a custom post type and other related functionality.
  *
- * @link 		http://example.com
+ * @link 		https://www.mervis.com
  * @since 		1.0.0
  *
  * @package 	Mervis_CPTS
  * @subpackage 	Mervis_CPTS/classes
  * @author 		DCC Marketing <web@dccmarketing.com>
  */
-class Mervis_CPTS_CPT_PostTypeName {
+class Mervis_CPTS_CPT_Offers {
 
 	/**
 	 * Constructor
@@ -36,7 +36,7 @@ class Mervis_CPTS_CPT_PostTypeName {
 	 *
 	 * @return 		string 							The column content
 	 */
-	public function posttypename_column_content( $column_name, $post_id  ) {
+	public function offers_column_content( $column_name, $post_id  ) {
 
 		if ( empty( $post_id ) ) { return; }
 
@@ -58,20 +58,20 @@ class Mervis_CPTS_CPT_PostTypeName {
 
 		}
 
-	} // posttypename_column_content()
+	} // offers_column_content()
 
 	/**
-	 * Sorts the posttypename admin list by the display order
+	 * Sorts the offers admin list by the display order
 	 *
 	 * @param 		array 		$vars 			The current query vars array
 	 *
 	 * @return 		array 						The modified query vars array
 	 */
-	public function posttypename_order_sorting( $vars ) {
+	public function offers_order_sorting( $vars ) {
 
 		if ( empty( $vars ) ) { return $vars; }
 		if ( ! is_admin() ) { return $vars; }
-		if ( ! isset( $vars['post_type'] ) || 'posttypename' !== $vars['post_type'] ) { return $vars; }
+		if ( ! isset( $vars['post_type'] ) || 'offers' !== $vars['post_type'] ) { return $vars; }
 
 		if ( isset( $vars['orderby'] ) && 'sortable-column' === $vars['orderby'] ) {
 
@@ -84,7 +84,7 @@ class Mervis_CPTS_CPT_PostTypeName {
 
 		return $vars;
 
-	} // posttypename_order_sorting()
+	} // offers_order_sorting()
 
 	/**
 	 * Registers additional columns for the admin listing
@@ -94,7 +94,7 @@ class Mervis_CPTS_CPT_PostTypeName {
 	 *
 	 * @return 		array 						The modified columns
 	 */
-	public function posttypename_register_columns( $columns ) {
+	public function offers_register_columns( $columns ) {
 
 		$new['cb'] 				= '<input type="checkbox" />';
 		$new['thumbnail'] 		= __( 'Thumbnail', 'mervis-cpts' );
@@ -103,7 +103,7 @@ class Mervis_CPTS_CPT_PostTypeName {
 
 		return $new;
 
-	} // posttypename_register_columns()
+	} // offers_register_columns()
 
 	/**
 	 * Registers sortable columns
@@ -112,24 +112,18 @@ class Mervis_CPTS_CPT_PostTypeName {
 	 *
 	 * @return 		array 							The modified sortable columns
 	 */
-	public function posttypename_sortable_columns( $sortables ) {
+	public function offers_sortable_columns( $sortables ) {
 
 		$sortables['sortable-column'] = 'display-order';
 
 		return $sortables;
 
-	} // posttypename_sortable_columns()
+	} // offers_sortable_columns()
 
 	/**
 	 * Creates a new custom post type
-	 *
-	 * Replacements
-	 * posttypename: name of the post type, all lowercase.
-	 * PostTypeSingle: singular version of the post type.
-	 * PostTypePlural: plural version of the post type.
-	 * FeaturedImageName: name of the featured image for this post type.
 	 */
-	public static function new_cpt_posttypename() {
+	public static function new_cpt_offers() {
 
 		$cap_type = 'post';
 
@@ -140,20 +134,20 @@ class Mervis_CPTS_CPT_PostTypeName {
 		$opts['has_archive']							= FALSE;
 		$opts['hierarchical']							= FALSE;
 		$opts['map_meta_cap']							= TRUE;
-		$opts['menu_icon']								= 'dashicons-groups';
+		$opts['menu_icon']								= 'dashicons-tickets-alt';
 		$opts['menu_position']							= 25;
 		$opts['public']									= TRUE;
 		$opts['publicly_querable']						= TRUE;
 		$opts['query_var']								= TRUE;
 		$opts['register_meta_box_cb']					= '';
 		$opts['rewrite']								= FALSE;
-		$opts['rest_base']								= 'posttypename';
+		$opts['rest_base']								= 'offers';
 		$opts['rest_controller_class']					= 'WP_REST_Posts_Controller';
 		$opts['show_in_admin_bar']						= TRUE;
 		$opts['show_in_menu']							= TRUE;
 		$opts['show_in_nav_menu']						= TRUE;
 		$opts['show_ui']								= TRUE;
-		$opts['supports']								= array( 'title', 'editor', 'thumbnail' );
+		$opts['supports']								= array( 'title' );
 		$opts['taxonomies']								= array();
 
 		$opts['capabilities']['delete_others_posts']	= "delete_others_{$cap_type}s";
@@ -170,56 +164,56 @@ class Mervis_CPTS_CPT_PostTypeName {
 		$opts['capabilities']['read_post']				= "read_{$cap_type}";
 		$opts['capabilities']['read_private_posts']		= "read_private_{$cap_type}s";
 
-		$opts['labels']['add_new']						= esc_html__( 'Add New PostTypeSingle', 'mervis-cpts' );
-		$opts['labels']['add_new_item']					= esc_html__( 'Add New PostTypeSingle', 'mervis-cpts' );
-		$opts['labels']['all_items']					= esc_html__( 'PostTypePlural', 'mervis-cpts' );
-		$opts['labels']['edit_item']					= esc_html__( 'Edit PostTypeSingle' , 'mervis-cpts');
-		$opts['labels']['menu_name']					= esc_html__( 'PostTypePlural', 'mervis-cpts' );
-		$opts['labels']['name']							= esc_html__( 'PostTypePlural', 'mervis-cpts' );
-		$opts['labels']['name_admin_bar']				= esc_html__( 'PostTypeSingle', 'mervis-cpts' );
-		$opts['labels']['new_item']						= esc_html__( 'New PostTypeSingle', 'mervis-cpts' );
-		$opts['labels']['not_found']					= esc_html__( 'No PostTypePlural Found', 'mervis-cpts' );
-		$opts['labels']['not_found_in_trash']			= esc_html__( 'No PostTypePlural Found in Trash', 'mervis-cpts' );
-		$opts['labels']['parent_item_colon']			= esc_html__( 'Parent PostTypePlural :', 'mervis-cpts' );
-		$opts['labels']['search_items']					= esc_html__( 'Search PostTypePlural', 'mervis-cpts' );
-		$opts['labels']['singular_name']				= esc_html__( 'PostTypeSingle', 'mervis-cpts' );
-		$opts['labels']['view_item']					= esc_html__( 'View PostTypeSingle', 'mervis-cpts' );
+		$opts['labels']['add_new']						= esc_html__( 'Add New Offer', 'mervis-cpts' );
+		$opts['labels']['add_new_item']					= esc_html__( 'Add New Offer', 'mervis-cpts' );
+		$opts['labels']['all_items']					= esc_html__( 'Offers', 'mervis-cpts' );
+		$opts['labels']['edit_item']					= esc_html__( 'Edit Offer' , 'mervis-cpts');
+		$opts['labels']['menu_name']					= esc_html__( 'Offers', 'mervis-cpts' );
+		$opts['labels']['name']							= esc_html__( 'Offers', 'mervis-cpts' );
+		$opts['labels']['name_admin_bar']				= esc_html__( 'Offer', 'mervis-cpts' );
+		$opts['labels']['new_item']						= esc_html__( 'New Offer', 'mervis-cpts' );
+		$opts['labels']['not_found']					= esc_html__( 'No Offers Found', 'mervis-cpts' );
+		$opts['labels']['not_found_in_trash']			= esc_html__( 'No Offers Found in Trash', 'mervis-cpts' );
+		$opts['labels']['parent_item_colon']			= esc_html__( 'Parent Offers :', 'mervis-cpts' );
+		$opts['labels']['search_items']					= esc_html__( 'Search Offers', 'mervis-cpts' );
+		$opts['labels']['singular_name']				= esc_html__( 'Offer', 'mervis-cpts' );
+		$opts['labels']['view_item']					= esc_html__( 'View Offer', 'mervis-cpts' );
 
-		$opts['labels']['add_new']						= esc_html__( 'Add New PostTypeSingle', 'mervis-cpts' );
-		$opts['labels']['add_new_item']					= esc_html__( 'Add New PostTypeSingle', 'mervis-cpts' );
-		$opts['labels']['all_items']					= esc_html__( 'PostTypePlural', 'mervis-cpts' );
-		$opts['labels']['archives']						= esc_html__( 'PostTypePlural', 'mervis-cpts' );
-		$opts['labels']['edit_item']					= esc_html__( 'Edit PostTypeSingle', 'mervis-cpts');
+		$opts['labels']['add_new']						= esc_html__( 'Add New Offer', 'mervis-cpts' );
+		$opts['labels']['add_new_item']					= esc_html__( 'Add New Offer', 'mervis-cpts' );
+		$opts['labels']['all_items']					= esc_html__( 'Offers', 'mervis-cpts' );
+		$opts['labels']['archives']						= esc_html__( 'Offers', 'mervis-cpts' );
+		$opts['labels']['edit_item']					= esc_html__( 'Edit Offer', 'mervis-cpts');
 		$opts['labels']['featured_image']				= esc_html__( 'FeaturedImageName', 'mervis-cpts');
-		$opts['labels']['filter_items_list']			= esc_html__( 'PostTypePlural', 'mervis-cpts');
-		$opts['labels']['insert_into_item']				= esc_html__( 'PostTypeSingle', 'mervis-cpts');
-		$opts['labels']['items_list']					= esc_html__( 'PostTypePlural', 'mervis-cpts');
-		$opts['labels']['items_list_navigation']		= esc_html__( 'PostTypePlural', 'mervis-cpts');
-		$opts['labels']['menu_name']					= esc_html__( 'PostTypePlural', 'mervis-cpts' );
-		$opts['labels']['name']							= esc_html__( 'PostTypePlural', 'mervis-cpts' );
-		$opts['labels']['name_admin_bar']				= esc_html__( 'PostTypeSingle', 'mervis-cpts' );
-		$opts['labels']['new_item']						= esc_html__( 'New PostTypeSingle', 'mervis-cpts' );
-		$opts['labels']['not_found']					= esc_html__( 'No PostTypePlural Found', 'mervis-cpts' );
-		$opts['labels']['not_found_in_trash']			= esc_html__( 'No PostTypePlural Found in Trash', 'mervis-cpts' );
-		$opts['labels']['parent_item_colon']			= esc_html__( 'Parent PostTypePlural :', 'mervis-cpts' );
+		$opts['labels']['filter_items_list']			= esc_html__( 'Offers', 'mervis-cpts');
+		$opts['labels']['insert_into_item']				= esc_html__( 'Offer', 'mervis-cpts');
+		$opts['labels']['items_list']					= esc_html__( 'Offers', 'mervis-cpts');
+		$opts['labels']['items_list_navigation']		= esc_html__( 'Offers', 'mervis-cpts');
+		$opts['labels']['menu_name']					= esc_html__( 'Offers', 'mervis-cpts' );
+		$opts['labels']['name']							= esc_html__( 'Offers', 'mervis-cpts' );
+		$opts['labels']['name_admin_bar']				= esc_html__( 'Offer', 'mervis-cpts' );
+		$opts['labels']['new_item']						= esc_html__( 'New Offer', 'mervis-cpts' );
+		$opts['labels']['not_found']					= esc_html__( 'No Offers Found', 'mervis-cpts' );
+		$opts['labels']['not_found_in_trash']			= esc_html__( 'No Offers Found in Trash', 'mervis-cpts' );
+		$opts['labels']['parent_item_colon']			= esc_html__( 'Parent Offers :', 'mervis-cpts' );
 		$opts['labels']['remove_featured_image']		= esc_html__( 'Remove FeaturedImageName', 'mervis-cpts' );
-		$opts['labels']['search_items']					= esc_html__( 'Search PostTypePlural', 'mervis-cpts' );
+		$opts['labels']['search_items']					= esc_html__( 'Search Offers', 'mervis-cpts' );
 		$opts['labels']['set_featured_image']			= esc_html__( 'Set FeaturedImageName', 'mervis-cpts' );
-		$opts['labels']['singular_name']				= esc_html__( 'PostTypeSingle', 'mervis-cpts' );
-		$opts['labels']['upload_to_this_item']			= esc_html__( 'PostTypeSingle', 'mervis-cpts' );
+		$opts['labels']['singular_name']				= esc_html__( 'Offer', 'mervis-cpts' );
+		$opts['labels']['upload_to_this_item']			= esc_html__( 'Offer', 'mervis-cpts' );
 		$opts['labels']['use_featured_image']			= esc_html__( 'Use as FeaturedImageName', 'mervis-cpts' );
-		$opts['labels']['view_item']					= esc_html__( 'View PostTypeSingle', 'mervis-cpts' );
+		$opts['labels']['view_item']					= esc_html__( 'View Offer', 'mervis-cpts' );
 
 		$opts['rewrite']['ep_mask']						= EP_PERMALINK;
 		$opts['rewrite']['feeds']						= FALSE;
 		$opts['rewrite']['pages']						= TRUE;
-		$opts['rewrite']['slug']						= esc_html__( 'posttypename', 'mervis-cpts' );
+		$opts['rewrite']['slug']						= esc_html__( 'offers', 'mervis-cpts' );
 		$opts['rewrite']['with_front']					= TRUE;
 
-		$opts = apply_filters( 'mervis-cpts-cpt-posttypename-options', $opts );
+		$opts = apply_filters( 'mervis-cpts-cpt-offers-options', $opts );
 
-		register_post_type( 'posttypename', $opts );
+		register_post_type( 'offers', $opts );
 
-	} // new_cpt_posttypename()
+	} // new_cpt_offers()
 
 } // class
