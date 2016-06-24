@@ -16,7 +16,7 @@
  * @subpackage 	DocBlock/classes
  * @author 		Your Name <email@example.com>
  */
-class Class_Name_Metaboxes {
+class Mervis_CPTS_Metaboxes {
 
 	/**
 	 * The post meta data
@@ -200,7 +200,7 @@ class Class_Name_Metaboxes {
 		foreach ( $metas as $meta ) {
 
 			$value 		= ( empty( $this->meta[$meta[0]][0] ) ? '' : $this->meta[$meta[0]][0] );
-			$sanitizer 	= new Class_Name_Sanitize();
+			$sanitizer 	= new Mervis_CPTS_Sanitize();
 			$new_value 	= $sanitizer->clean( $_POST[$meta[0]], $meta[1] );
 
 			update_post_meta( $post_id, $meta[0], $new_value );

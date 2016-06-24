@@ -22,7 +22,7 @@ function MERVIS_CPTS_get_svg( $svg ) {
 
 	if ( empty( $svg ) ) { return; }
 
-	$list = Class_Name_Public::get_svg_list();
+	$list = Mervis_CPTS_Public::get_svg_list();
 
 	return $list[$svg];
 

@@ -28,7 +28,7 @@
  * @author 		Your Name <email@example.com>
  * http://example.com
  */
-class Class_Name_Plugin_Name {
+class Mervis_CPTS_Plugin_Name {
 
 	/**
 	 * The current version of the plugin.
@@ -45,7 +45,7 @@ class Class_Name_Plugin_Name {
 	 *
 	 * @since    1.0.0
 	 * @access   protected
-	 * @var      Class_Name_Loader    $loader    Maintains and registers all hooks for the plugin.
+	 * @var      Mervis_CPTS_Loader    $loader    Maintains and registers all hooks for the plugin.
 	 */
 	protected $loader;
 
@@ -79,15 +79,15 @@ class Class_Name_Plugin_Name {
 	 */
 	private function load_dependencies() {
 
-		$this->loader 		= new Class_Name_Loader();
-		$this->sanitizer 	= new Class_Name_Sanitize();
+		$this->loader 		= new Mervis_CPTS_Loader();
+		$this->sanitizer 	= new Mervis_CPTS_Sanitize();
 
 	} // load_dependencies()
 
 	/**
 	 * Define the locale for this plugin for internationalization.
 	 *
-	 * Uses the Class_Name_i18n class in order to set the domain and to register the hook
+	 * Uses the Mervis_CPTS_i18n class in order to set the domain and to register the hook
 	 * with WordPress.
 	 *
 	 * @since    1.0.0
@@ -95,7 +95,7 @@ class Class_Name_Plugin_Name {
 	 */
 	private function set_locale() {
 
-		$plugin_i18n = new Class_Name_i18n();
+		$plugin_i18n = new Mervis_CPTS_i18n();
 
 		$this->loader->action( 'plugins_loaded', $plugin_i18n, 'load_plugin_textdomain' );
 
@@ -110,7 +110,7 @@ class Class_Name_Plugin_Name {
 	 */
 	private function define_admin_hooks() {
 
-		$plugin_admin = new Class_Name_Admin();
+		$plugin_admin = new Mervis_CPTS_Admin();
 
 		$this->loader->action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
@@ -131,7 +131,7 @@ class Class_Name_Plugin_Name {
 	 */
 	private function define_cpt_and_tax_hooks() {
 
-		$plugin_cpt_posttypename = new Class_Name_CPT_PostTypeName();
+		$plugin_cpt_posttypename = new Mervis_CPTS_CPT_PostTypeName();
 
 		$this->loader->action( 'init', $plugin_cpt_posttypename, 'new_cpt_posttypename' );
 		$this->loader->filter( 'manage_posttypename_posts_columns', $plugin_cpt_posttypename, 'posttypename_register_columns' );
@@ -140,7 +140,7 @@ class Class_Name_Plugin_Name {
 		$this->loader->action( 'request', $plugin_cpt_posttypename, 'posttypename_order_sorting', 10, 2 );
 		$this->loader->action( 'init', $plugin_cpt_posttypename, 'add_image_sizes' );
 
-		$plugin_tax_taxonomyname =new Class_Name_Tax_TaxonomyName();
+		$plugin_tax_taxonomyname =new Mervis_CPTS_Tax_TaxonomyName();
 
 		$this->loader->action( 'init', $plugin_tax_taxonomyname, 'new_taxonomy_taxonomyname' );
 
@@ -154,7 +154,7 @@ class Class_Name_Plugin_Name {
 	 */
 	private function define_metabox_hooks() {
 
-		$plugin_metaboxes = new Class_Name_Metaboxes();
+		$plugin_metaboxes = new Mervis_CPTS_Metaboxes();
 
 		$this->loader->action( 'add_meta_boxes_posttypename', $plugin_metaboxes, 'add_metaboxes' );
 		$this->loader->action( 'save_post_posttypename', $plugin_metaboxes, 'validate_meta', 10, 2 );
@@ -173,7 +173,7 @@ class Class_Name_Plugin_Name {
 	 */
 	private function define_public_hooks() {
 
-		$plugin_public = new Class_Name_Public();
+		$plugin_public = new Mervis_CPTS_Public();
 
 		$this->loader->action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
@@ -201,7 +201,7 @@ class Class_Name_Plugin_Name {
 	 */
 	private function define_template_hooks() {
 
-		$plugin_templates = new Class_Name_Templates();
+		$plugin_templates = new Mervis_CPTS_Templates();
 
 		// Loop
 		$this->loader->action( 'plugin-name-before-loop', 			$plugin_templates, 'loop_wrap_begin', 10, 1 );
@@ -261,7 +261,7 @@ class Class_Name_Plugin_Name {
 	 *
 	 * @since     1.0.0
 	 *
-	 * @return    Class_Name_Loader    Orchestrates the hooks of the plugin.
+	 * @return    Mervis_CPTS_Loader    Orchestrates the hooks of the plugin.
 	 */
 	public function get_loader() {
 

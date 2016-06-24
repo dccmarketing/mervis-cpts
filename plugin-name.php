@@ -26,9 +26,6 @@
  *
  * Replacements (case sensitive):
  *
- * MERVIS_CPTS_						Constants
- * Class_Name_ 						Class names
- * MERVIS_CPTS_ 					Function names & nonces
  * plugin-name- 					Files Refs, Actions, Filters, CSS classes, and script names
  * 'plugin-name' 					Text domain
  * DocBlock 						DocBlocks
@@ -48,8 +45,8 @@ define( 'MERVIS_CPTS_FILE', plugin_basename( __FILE__ ) );
 /**
  * Activation/Deactivation Hooks
  */
-register_activation_hook( __FILE__, array( 'Class_Name_Activator', 'activate' ) );
-register_deactivation_hook( __FILE__, array( 'Class_Name_Deactivator', 'deactivate' ) );
+register_activation_hook( __FILE__, array( 'Mervis_CPTS_Activator', 'activate' ) );
+register_deactivation_hook( __FILE__, array( 'Mervis_CPTS_Deactivator', 'deactivate' ) );
 
 /**
  * Autoloader function
@@ -62,7 +59,7 @@ if ( ! function_exists( 'MERVIS_CPTS_autoloader' ) ) :
 
 	function MERVIS_CPTS_autoloader( $class_name ) {
 
-		$class_name = str_replace( 'Class_Name_', '', $class_name );
+		$class_name = str_replace( 'Mervis_CPTS_', '', $class_name );
 		$lower 		= strtolower( $class_name );
 		$file      	= 'class-' . str_replace( '_', '-', $lower ) . '.php';
 		$base_path 	= plugin_dir_path( __FILE__ );
@@ -115,7 +112,7 @@ if ( ! function_exists( 'plugin_name' ) ) :
 	 */
 	function plugin_name() {
 
-		return Class_Name_Plugin_Name::get_instance();
+		return Mervis_CPTS_Plugin_Name::get_instance();
 
 	}
 

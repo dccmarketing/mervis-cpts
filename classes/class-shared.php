@@ -11,7 +11,7 @@
  * @author 		Your Name <email@example.com>
  */
 
-class Class_Name_Shared {
+class Mervis_CPTS_Shared {
 
 	/**
 	 * Initialize the class and set its properties.

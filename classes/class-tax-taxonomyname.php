@@ -12,7 +12,7 @@
  * @subpackage 	DocBlock/classes
  * @author		Your Name <email@example.com>
  */
-class Class_Name_Tax_TaxonomyName {
+class Mervis_CPTS_Tax_TaxonomyName {
 
 	/**
 	 * The term meta data

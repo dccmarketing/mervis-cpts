@@ -20,7 +20,7 @@
  * @subpackage 	DocBlock/classes
  * @author 		Your Name <email@example.com>
  */
-class Class_Name_Activator {
+class Mervis_CPTS_Activator {
 
 	/**
 	 * Short Description. (use period)
@@ -35,13 +35,13 @@ class Class_Name_Activator {
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'classes/class-cpt-posttypename.php';
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'classes/class-tax-taxonomyname.php';
 
-		Class_Name_CPT_PostTypeName::new_cpt_posttypename();
-		Class_Name_Tax_TaxonomyName::new_taxonomy_taxonomyname();
+		Mervis_CPTS_CPT_PostTypeName::new_cpt_posttypename();
+		Mervis_CPTS_Tax_TaxonomyName::new_taxonomy_taxonomyname();
 
 		flush_rewrite_rules();
 
 		$opts 		= array();
-		$options 	= Class_Name_Admin::get_options_list();
+		$options 	= Mervis_CPTS_Admin::get_options_list();
 
 		foreach ( $options as $option ) {
 

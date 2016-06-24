@@ -11,7 +11,7 @@
  * @subpackage 	DocBlock/classes
  * @author 		Your Name <email@example.com>
  */
-class Class_Name_i18n {
+class Mervis_CPTS_i18n {
 
 
 	/**

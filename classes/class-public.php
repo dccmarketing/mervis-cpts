@@ -20,7 +20,7 @@
  * @subpackage 	DocBlock/classes
  * @author 		Your Name <email@example.com>
  */
-class Class_Name_Public {
+class Mervis_CPTS_Public {
 
 	/**
 	 * The post meta data
@@ -114,7 +114,7 @@ class Class_Name_Public {
 		$defaults['quantity'] 		= 100;
 		$defaults['show'] 			= '';
 		$args						= shortcode_atts( $defaults, $atts, 'shortcodename' );
-		$shared 					= new Class_Name_Shared( MERVIS_CPTS_SLUG, MERVIS_CPTS_VERSION );
+		$shared 					= new Mervis_CPTS_Shared( MERVIS_CPTS_SLUG, MERVIS_CPTS_VERSION );
 		$items 						= $shared->query( $args );
 
 		if ( is_array( $items ) || is_object( $items ) ) {

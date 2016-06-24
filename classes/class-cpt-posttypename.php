@@ -12,7 +12,7 @@
  * @subpackage 	DocBlock/classes
  * @author 		Your Name <email@example.com>
  */
-class Class_Name_CPT_PostTypeName {
+class Mervis_CPTS_CPT_PostTypeName {
 
 	/**
 	 * Constructor

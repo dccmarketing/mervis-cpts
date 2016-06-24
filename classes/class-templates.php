@@ -19,7 +19,7 @@ if ( ! function_exists( 'MERVIS_CPTS_templates' ) ) {
 	 */
 	function MERVIS_CPTS_templates() {
 
-		return Class_Name_Templates::this();
+		return Mervis_CPTS_Templates::this();
 
 	} // MERVIS_CPTS_templates()
 
@@ -44,7 +44,7 @@ if ( ! function_exists( 'MERVIS_CPTS_templates' ) ) {
  * @subpackage 	DocBlock/classes
  *
  */
-class Class_Name_Templates {
+class Mervis_CPTS_Templates {
 
 	/**
 	 * Private static reference to this class

@@ -20,7 +20,7 @@
  * @subpackage 	DocBlock/classes
  * @author 		Your Name <email@example.com>
  */
-class Class_Name_Admin {
+class Mervis_CPTS_Admin {
 
 	/**
 	 * The settings fields.
@@ -631,7 +631,7 @@ class Class_Name_Admin {
 
 		foreach ( $options as $option ) {
 
-			$sanitizer 			= new Class_Name_Sanitize();
+			$sanitizer 			= new Mervis_CPTS_Sanitize();
 			$valid[$option[0]] 	= $sanitizer->clean( $input[$option[0]], $option[1] );
 
 			if ( $valid[$option[0]] != $input[$option[0]] ) {

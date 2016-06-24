@@ -21,7 +21,7 @@
  * @subpackage 	DocBlock/classes
  * @author 		Your Name <email@example.com>
  */
-class Class_Name_Loader {
+class Mervis_CPTS_Loader {
 
 	/**
 	 * The array of actions registered with WordPress.

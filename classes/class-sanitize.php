@@ -10,7 +10,7 @@
  * @author 		Your Name <email@example.com>
  */
 
-class Class_Name_Sanitize {
+class Mervis_CPTS_Sanitize {
 
 	/**
 	 * Constructor
