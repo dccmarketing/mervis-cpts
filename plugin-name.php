@@ -23,10 +23,6 @@
  * License URI: 		http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain: 		plugin-name
  * Domain Path: 		/assets/languages
- *
- * Replacements (case sensitive):
- *
- * Your Name <email@example.com> 	DockBlocks
  */
 
 // If this file is called directly, abort.

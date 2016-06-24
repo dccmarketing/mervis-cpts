@@ -7,7 +7,7 @@
  *
  * @package		Mervis_CPTS
  * @subpackage 	Mervis_CPTS/classes
- * @author 		Your Name <email@example.com>
+ * @author 		DCC Marketing <web@dccmarketing.com>
  */
 
 /**

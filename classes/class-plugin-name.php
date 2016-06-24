@@ -25,7 +25,7 @@
  * @since 		1.0.0
  * @package 	Mervis_CPTS
  * @subpackage 	Mervis_CPTS/classes
- * @author 		Your Name <email@example.com>
+ * @author 		DCC Marketing <web@dccmarketing.com>
  * http://example.com
  */
 class Mervis_CPTS_Plugin_Name {
