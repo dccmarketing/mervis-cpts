@@ -3,25 +3,20 @@
 /**
  * The plugin bootstrap file
  *
- * This file is read by WordPress to generate the plugin information in the plugin
- * admin area. This file also includes all of the dependencies used by the plugin,
- * registers the activation and deactivation functions, and defines a function
- * that starts the plugin.
- *
  * @link 				http://example.com
  * @since 				1.0.0
  * @package 			Mervis_CPTS
  *
  * @wordpress-plugin
- * Plugin Name: 		WordPress Plugin Boilerplate
- * Plugin URI: 			http://example.com/mervis-cpts-uri/
- * Description: 		This is a short description of what the plugin does. It's displayed in the WordPress admin area.
+ * Plugin Name: 		Mervis CPTS
+ * Plugin URI: 			https://www.mervis.com
+ * Description: 		Custom post types for Mervis site.
  * Version: 			1.0.0
- * Author: 				Your Name or Your Company
- * Author URI: 			http://example.com/
+ * Author: 				DCC Marketing
+ * Author URI: 			http://www.dccmarketing.com/
  * License: 			GPL-2.0+
  * License URI: 		http://www.gnu.org/licenses/gpl-2.0.txt
- * Text Domain: 		plugin-name
+ * Text Domain: 		mervis-cpts
  * Domain Path: 		/assets/languages
  */
 
