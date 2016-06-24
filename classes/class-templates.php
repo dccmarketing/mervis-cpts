@@ -5,8 +5,8 @@
  * @link 		http://example.com
  * @since 		1.0.0
  *
- * @package		DocBlock
- * @subpackage 	DocBlock/classes
+ * @package		Mervis_CPTS
+ * @subpackage 	Mervis_CPTS/classes
  * @author 		Your Name <email@example.com>
  */
 
@@ -31,8 +31,8 @@ if ( ! function_exists( 'MERVIS_CPTS_templates' ) ) {
  * @link 		http://example.com
  * @since 		1.0.0
  *
- * @package 	DocBlock
- * @subpackage 	DocBlock/classes
+ * @package 	Mervis_CPTS
+ * @subpackage 	Mervis_CPTS/classes
  */
 
 /**
@@ -40,8 +40,8 @@ if ( ! function_exists( 'MERVIS_CPTS_templates' ) ) {
  *
  * Defines the methods for creating the templates.
  *
- * @package 	DocBlock
- * @subpackage 	DocBlock/classes
+ * @package 	Mervis_CPTS
+ * @subpackage 	Mervis_CPTS/classes
  *
  */
 class Mervis_CPTS_Templates {

@@ -2,7 +2,7 @@
 /**
  * The template for displaying single post content.
  *
- * @package DocBlock
+ * @package Mervis_CPTS
  */
 
 ?><div class="content-posttypename"><?php

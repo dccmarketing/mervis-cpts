@@ -2,7 +2,7 @@
 /**
  * The template for displaying single post titles.
  *
- * @package DocBlock
+ * @package Mervis_CPTS
  */
 
 ?><header class="entry-header"><?php

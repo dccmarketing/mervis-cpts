@@ -5,8 +5,8 @@
  * @link 		http://example.com
  * @since 		1.0.0
  *
- * @package		DocBlock
- * @subpackage 	DocBlock/classes
+ * @package		Mervis_CPTS
+ * @subpackage 	Mervis_CPTS/classes
  * @author 		Your Name <email@example.com>
  */
 

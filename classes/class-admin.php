@@ -6,8 +6,8 @@
  * @link 		http://example.com
  * @since 		1.0.0
  *
- * @package 	DocBlock
- * @subpackage 	DocBlock/classes
+ * @package 	Mervis_CPTS
+ * @subpackage 	Mervis_CPTS/classes
  */
 
 /**
@@ -16,8 +16,8 @@
  * Defines the plugin name, version, and two examples hooks for how to
  * enqueue the admin-specific stylesheet and JavaScript.
  *
- * @package 	DocBlock
- * @subpackage 	DocBlock/classes
+ * @package 	Mervis_CPTS
+ * @subpackage 	Mervis_CPTS/classes
  * @author 		Your Name <email@example.com>
  */
 class Mervis_CPTS_Admin {

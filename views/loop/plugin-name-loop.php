@@ -8,8 +8,8 @@
  * @link       http://slushman.com
  * @since      1.0.0
  *
- * @package    DocBlock
- * @subpackage DocBlock/classes/loop-views
+ * @package    Mervis_CPTS
+ * @subpackage Mervis_CPTS/classes/loop-views
  */
 
 /**

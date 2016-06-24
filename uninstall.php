@@ -22,7 +22,7 @@
  * @link 		http://example.com
  * @since 		1.0.0
  *
- * @package 	DocBlock
+ * @package 	Mervis_CPTS
  */
 
 // If uninstall not called from WordPress, then exit.

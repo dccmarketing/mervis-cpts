@@ -10,7 +10,7 @@
  *
  * @link 				http://example.com
  * @since 				1.0.0
- * @package 			DocBlock
+ * @package 			Mervis_CPTS
  *
  * @wordpress-plugin
  * Plugin Name: 		WordPress Plugin Boilerplate
@@ -26,9 +26,6 @@
  *
  * Replacements (case sensitive):
  *
- * mervis-cpts- 					Files Refs, Actions, Filters, CSS classes, and script names
- * 'plugin-name' 					Text domain
- * DocBlock 						DocBlocks
  * Your Name <email@example.com> 	DockBlocks
  */
 
@@ -39,7 +36,7 @@ if ( ! defined( 'WPINC' ) ) { die; }
  * Define constants
  */
 define( 'MERVIS_CPTS_VERSION', '1.0.0' );
-define( 'MERVIS_CPTS_SLUG', 'plugin-name' );
+define( 'MERVIS_CPTS_SLUG', 'mervis-cpts' );
 define( 'MERVIS_CPTS_FILE', plugin_basename( __FILE__ ) );
 
 /**

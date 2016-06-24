@@ -6,8 +6,8 @@
  * @link 		http://example.com
  * @since 		1.0.0
  *
- * @package 	DocBlock
- * @subpackage 	DocBlock/classes
+ * @package 	Mervis_CPTS
+ * @subpackage 	Mervis_CPTS/classes
  */
 
 /**
@@ -17,8 +17,8 @@
  * the plugin, and register them with the WordPress API. Call the
  * run function to execute the list of actions and filters.
  *
- * @package 	DocBlock
- * @subpackage 	DocBlock/classes
+ * @package 	Mervis_CPTS
+ * @subpackage 	Mervis_CPTS/classes
  * @author 		Your Name <email@example.com>
  */
 class Mervis_CPTS_Loader {

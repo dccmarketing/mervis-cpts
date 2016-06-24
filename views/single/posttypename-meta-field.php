@@ -2,7 +2,7 @@
 /**
  * The template for displaying single post meta field data.
  *
- * @package DocBlock
+ * @package Mervis_CPTS
  */
 
 if ( empty( $meta['meta-field'][0] ) ) { return; }

@@ -6,8 +6,8 @@
  * @link       http://example.com
  * @since      1.0.0
  *
- * @package    DocBlock
- * @subpackage DocBlock/classes/views
+ * @package    Mervis_CPTS
+ * @subpackage Mervis_CPTS/classes/views
  */
 
 wp_nonce_field( MERVIS_CPTS_SLUG, 'nonce_MERVIS_CPTS_metabox_name' );

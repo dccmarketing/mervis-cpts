@@ -2,7 +2,7 @@
 /**
  * The template for displaying single post subtitle.
  *
- * @package DocBlock
+ * @package Mervis_CPTS
  */
 
 if ( empty( $meta['subtitle'][0] ) ) { return; }

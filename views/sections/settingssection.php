@@ -6,8 +6,8 @@
  * @link 		http://example.com
  * @since 		1.0.0
  *
- * @package		DocBlock
- * @subpackage 	DocBlock/views
+ * @package		Mervis_CPTS
+ * @subpackage 	Mervis_CPTS/views
  */
 
 ?><p><?php esc_html_e( '', 'mervis-cpts' ); ?></p>

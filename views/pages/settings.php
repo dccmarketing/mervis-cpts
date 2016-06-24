@@ -8,8 +8,8 @@
  * @link       http://example.com
  * @since      1.0.0
  *
- * @package    DocBlock
- * @subpackage DocBlock/classes/views
+ * @package    Mervis_CPTS
+ * @subpackage Mervis_CPTS/classes/views
  */
 
 ?><h1><?php echo esc_html( get_admin_page_title() ); ?></h1>
