@@ -59,7 +59,7 @@ class Mervis_CPTS_Public {
 	 */
 	public function enqueue_styles() {
 
-		wp_enqueue_style( MERVIS_CPTS_SLUG, plugin_dir_url( dirname( __FILE__ ) ) . 'assets/css/plugin-name-public.css', array(), MERVIS_CPTS_VERSION, 'all' );
+		wp_enqueue_style( MERVIS_CPTS_SLUG, plugin_dir_url( dirname( __FILE__ ) ) . 'assets/css/mervis-cpts-public.css', array(), MERVIS_CPTS_VERSION, 'all' );
 
 	} // enqueue_styles()
 
@@ -70,7 +70,7 @@ class Mervis_CPTS_Public {
 	 */
 	public function enqueue_scripts() {
 
-		wp_enqueue_script( MERVIS_CPTS_SLUG, plugin_dir_url( dirname( __FILE__ ) ) . 'assets/js/plugin-name-public.min.js', array( 'jquery' ), MERVIS_CPTS_VERSION, true );
+		wp_enqueue_script( MERVIS_CPTS_SLUG, plugin_dir_url( dirname( __FILE__ ) ) . 'assets/js/mervis-cpts-public.min.js', array( 'jquery' ), MERVIS_CPTS_VERSION, true );
 
 	} // enqueue_scripts()
 

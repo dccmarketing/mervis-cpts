@@ -41,24 +41,24 @@ var team 						= 'DCC Marketing <web@dccmarketing.com>';
 var translatePath 				= './assets/languages'
 
 // Public styles
-var styleSRC 					= './src/scss/plugin-name-public.scss'; // Path to main .scss file.
+var styleSRC 					= './src/scss/mervis-cpts-public.scss'; // Path to main .scss file.
 var styleDestination 			= './assets/css'; // Path to place the compiled CSS file.
 
 // Admin styles
-var adminStyleSRC 				= './src/scss/plugin-name-admin.scss'; // Path to admin.scss file.
+var adminStyleSRC 				= './src/scss/mervis-cpts-admin.scss'; // Path to admin.scss file.
 var adminStyleDestination 		= './assets/css'; // Path to place the compiled CSS file.
 // Default set to root folder.
 
 // JS Public
 var jsPublicSRC 				= './src/public-js/*.js'; // Path to JS public scripts folder.
 var jsPublicDestination 		= './assets/js/'; // Path to place the compiled JS public scripts file.
-var jsPublicFile 				= 'plugin-name-public'; // Compiled JS public file name
+var jsPublicFile 				= 'mervis-cpts-public'; // Compiled JS public file name
 // Default set to public i.e. public.js.
 
 // JS Admin
 var jsAdminSRC 					= './src/admin-js/*.js'; // Path to JS admin scripts folder.
 var jsAdminDestination 			= './jassets/js/'; // Path to place the compiled JS admin scripts file.
-var jsAdminFile 				= 'plugin-name-admin'; // Compiled JS admin file name.
+var jsAdminFile 				= 'mervis-cpts-admin'; // Compiled JS admin file name.
 // Default set to admin i.e. admin.js.
 
 // Images related.

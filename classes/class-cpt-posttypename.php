@@ -216,7 +216,7 @@ class Mervis_CPTS_CPT_PostTypeName {
 		$opts['rewrite']['slug']						= esc_html__( 'posttypename', 'plugin-name' );
 		$opts['rewrite']['with_front']					= TRUE;
 
-		$opts = apply_filters( 'plugin-name-cpt-posttypename-options', $opts );
+		$opts = apply_filters( 'mervis-cpts-cpt-posttypename-options', $opts );
 
 		register_post_type( 'posttypename', $opts );
 

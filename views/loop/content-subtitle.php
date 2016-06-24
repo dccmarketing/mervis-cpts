@@ -5,4 +5,4 @@
 
 if ( empty( $meta['subtitle'][0] ) ) { return; }
 
-?><p class="plugin-name-subtitle"><?php echo esc_html( $meta['subtitle'][0] ); ?></p>
+?><p class="mervis-cpts-subtitle"><?php echo esc_html( $meta['subtitle'][0] ); ?></p>

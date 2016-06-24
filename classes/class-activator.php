@@ -49,7 +49,7 @@ class Mervis_CPTS_Activator {
 
 		}
 
-		update_option( 'plugin-name-options', $opts );
+		update_option( 'mervis-cpts-options', $opts );
 
 	} // activate()
 

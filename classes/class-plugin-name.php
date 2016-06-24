@@ -204,26 +204,26 @@ class Mervis_CPTS_Plugin_Name {
 		$plugin_templates = new Mervis_CPTS_Templates();
 
 		// Loop
-		$this->loader->action( 'plugin-name-before-loop', 			$plugin_templates, 'loop_wrap_begin', 10, 1 );
+		$this->loader->action( 'mervis-cpts-before-loop', 			$plugin_templates, 'loop_wrap_begin', 10, 1 );
 
-		$this->loader->action( 'plugin-name-before-loop-content', 	$plugin_templates, 'loop_content_wrap_begin', 10, 2 );
-		$this->loader->action( 'plugin-name-before-loop-content', 	$plugin_templates, 'loop_content_link_begin', 15, 2 );
+		$this->loader->action( 'mervis-cpts-before-loop-content', 	$plugin_templates, 'loop_content_wrap_begin', 10, 2 );
+		$this->loader->action( 'mervis-cpts-before-loop-content', 	$plugin_templates, 'loop_content_link_begin', 15, 2 );
 
-		$this->loader->action( 'plugin-name-loop-content', 			$plugin_templates, 'loop_content_image', 10, 2 );
-		$this->loader->action( 'plugin-name-loop-content', 			$plugin_templates, 'loop_content_title', 15, 2 );
-		$this->loader->action( 'plugin-name-loop-content', 			$plugin_templates, 'loop_content_subtitle', 20, 2 );
+		$this->loader->action( 'mervis-cpts-loop-content', 			$plugin_templates, 'loop_content_image', 10, 2 );
+		$this->loader->action( 'mervis-cpts-loop-content', 			$plugin_templates, 'loop_content_title', 15, 2 );
+		$this->loader->action( 'mervis-cpts-loop-content', 			$plugin_templates, 'loop_content_subtitle', 20, 2 );
 
-		$this->loader->action( 'plugin-name-after-loop-content', 	$plugin_templates, 'loop_content_link_end', 10, 2 );
-		$this->loader->action( 'plugin-name-after-loop-content', 	$plugin_templates, 'loop_content_wrap_end', 90, 2 );
+		$this->loader->action( 'mervis-cpts-after-loop-content', 	$plugin_templates, 'loop_content_link_end', 10, 2 );
+		$this->loader->action( 'mervis-cpts-after-loop-content', 	$plugin_templates, 'loop_content_wrap_end', 90, 2 );
 
-		$this->loader->action( 'plugin-name-after-loop', 			$plugin_templates, 'loop_wrap_end', 10, 1 );
+		$this->loader->action( 'mervis-cpts-after-loop', 			$plugin_templates, 'loop_wrap_end', 10, 1 );
 
 		// Single
-		$this->loader->action( 'plugin-name-single-content', 		$plugin_templates, 'single_posttypename_thumbnail', 10 );
-		$this->loader->action( 'plugin-name-single-content', 		$plugin_templates, 'single_posttypename_posttitle', 15 );
-		$this->loader->action( 'plugin-name-single-content', 		$plugin_templates, 'single_posttypename_subtitle', 20, 1 );
-		$this->loader->action( 'plugin-name-single-content', 		$plugin_templates, 'single_posttypename_content', 25 );
-		$this->loader->action( 'plugin-name-single-content', 		$plugin_templates, 'single_posttypename_meta_field', 30, 1 );
+		$this->loader->action( 'mervis-cpts-single-content', 		$plugin_templates, 'single_posttypename_thumbnail', 10 );
+		$this->loader->action( 'mervis-cpts-single-content', 		$plugin_templates, 'single_posttypename_posttitle', 15 );
+		$this->loader->action( 'mervis-cpts-single-content', 		$plugin_templates, 'single_posttypename_subtitle', 20, 1 );
+		$this->loader->action( 'mervis-cpts-single-content', 		$plugin_templates, 'single_posttypename_content', 25 );
+		$this->loader->action( 'mervis-cpts-single-content', 		$plugin_templates, 'single_posttypename_meta_field', 30, 1 );
 
 	} // define_template_hooks()
 

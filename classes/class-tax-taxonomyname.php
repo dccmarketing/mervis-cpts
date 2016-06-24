@@ -83,7 +83,7 @@ class Mervis_CPTS_Tax_TaxonomyName {
 		$opts['rewrite']['slug']						= esc_html__( 'taxonomyname', 'plugin-name' );
 		$opts['rewrite']['with_front']					= FALSE;
 
-		$opts = apply_filters( 'plugin-name-taxonomy-taxonomyname-options', $opts );
+		$opts = apply_filters( 'mervis-cpts-taxonomy-taxonomyname-options', $opts );
 
 		register_taxonomy( 'taxonomyname', 'posttypename', $opts );
 

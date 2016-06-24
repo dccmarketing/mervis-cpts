@@ -3,4 +3,4 @@
  * The view for the list wrap start used in the loop
  */
 
-?><div class="plugin-name-list-wrap <?php echo $class; ?>"><ul class="plugin-name-list">
+?><div class="mervis-cpts-list-wrap <?php echo $class; ?>"><ul class="mervis-cpts-list">

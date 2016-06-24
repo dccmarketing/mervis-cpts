@@ -92,7 +92,7 @@ class Mervis_CPTS_Admin {
 	 */
 	public function enqueue_styles() {
 
-		wp_enqueue_style( MERVIS_CPTS_SLUG, plugin_dir_url( dirname( __FILE__ ) ) . 'assets/css/plugin-name-admin.css', array(), MERVIS_CPTS_VERSION, 'all' );
+		wp_enqueue_style( MERVIS_CPTS_SLUG, plugin_dir_url( dirname( __FILE__ ) ) . 'assets/css/mervis-cpts-admin.css', array(), MERVIS_CPTS_VERSION, 'all' );
 
 	} // enqueue_styles()
 
@@ -108,7 +108,7 @@ class Mervis_CPTS_Admin {
 
 		wp_enqueue_media();
 
-		wp_enqueue_script( MERVIS_CPTS_SLUG, plugin_dir_url( dirname( __FILE__ ) ) . 'assets/js/plugin-name-admin.min.js', array( 'jquery' ), MERVIS_CPTS_VERSION, true );
+		wp_enqueue_script( MERVIS_CPTS_SLUG, plugin_dir_url( dirname( __FILE__ ) ) . 'assets/js/mervis-cpts-admin.min.js', array( 'jquery' ), MERVIS_CPTS_VERSION, true );
 
 	} // enqueue_scripts()
 
@@ -128,7 +128,7 @@ class Mervis_CPTS_Admin {
 		$defaults['value'] 			= 0;
 
 		/**
-		 * plugin-name-field-checkbox-options-defaults filter
+		 * mervis-cpts-field-checkbox-options-defaults filter
 		 *
 		 * @param 	array 	$defaults 		The default settings for the field
 		 */
@@ -159,7 +159,7 @@ class Mervis_CPTS_Admin {
 		$defaults['value']			= '';
 
 		/**
-		 * plugin-name-field-text-options-defaults filter
+		 * mervis-cpts-field-text-options-defaults filter
 		 *
 		 * @param 	array 	$defaults 		The default settings for the field
 		 */
@@ -196,7 +196,7 @@ class Mervis_CPTS_Admin {
 		$defaults['value'] 			= '';
 
 		/**
-		 * plugin-name-field-text-options-defaults filter
+		 * mervis-cpts-field-text-options-defaults filter
 		 *
 		 * @param 	array 	$defaults 		The default settings for the field
 		 */
@@ -229,7 +229,7 @@ class Mervis_CPTS_Admin {
 		$defaults['value'] 			= 0;
 
 		/**
-		 * plugin-name-field-radios-options-defaults filter
+		 * mervis-cpts-field-radios-options-defaults filter
 		 *
 		 * @param 	array 	$defaults 		The default settings for the field
 		 */
@@ -268,7 +268,7 @@ class Mervis_CPTS_Admin {
 		$defaults['value'] 			= '';
 
 		/**
-		 * plugin-name-field-select-options-defaults filter
+		 * mervis-cpts-field-select-options-defaults filter
 		 *
 		 * @param 	array 	$defaults 		The default settings for the field
 		 */
@@ -313,7 +313,7 @@ class Mervis_CPTS_Admin {
 		$defaults['value'] 			= '';
 
 		/**
-		 * plugin-name-field-text-options-defaults filter
+		 * mervis-cpts-field-text-options-defaults filter
 		 *
 		 * @param 	array 	$defaults 		The default settings for the field
 		 */
@@ -348,7 +348,7 @@ class Mervis_CPTS_Admin {
 		$defaults['value'] 			= '';
 
 		/**
-		 * plugin-name-field-textarea-options-defaults filter
+		 * mervis-cpts-field-textarea-options-defaults filter
 		 *
 		 * @param 	array 	$defaults 		The default settings for the field
 		 */
@@ -397,7 +397,7 @@ class Mervis_CPTS_Admin {
 	 */
 	public function link_settings( $links ) {
 
-		$links[] = sprintf( '<a href="%s">%s</a>', admin_url( 'edit.php?post_type=posttypename&page=plugin-name-settings' ), esc_html__( 'Settings', 'plugin-name' ) );
+		$links[] = sprintf( '<a href="%s">%s</a>', admin_url( 'edit.php?post_type=posttypename&page=mervis-cpts-settings' ), esc_html__( 'Settings', 'plugin-name' ) );
 
 		return $links;
 

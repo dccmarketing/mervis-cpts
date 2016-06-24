@@ -121,7 +121,7 @@ class Mervis_CPTS_Templates {
 	/**
 	 * Includes the featured image template
 	 *
-	 * @hooked 		plugin-name-loop-content 		10
+	 * @hooked 		mervis-cpts-loop-content 		10
 	 *
 	 * @param 		object 		$item 		A post object
 	 * @param 		array 		$meta 		The post metadata
@@ -142,9 +142,9 @@ class Mervis_CPTS_Templates {
 	} // loop_content_meta_field()
 
 	/**
-	 * Includes the plugin-name-subtitle template
+	 * Includes the mervis-cpts-subtitle template
 	 *
-	 * @hooked 		plugin-name-loop-content 		30
+	 * @hooked 		mervis-cpts-loop-content 		30
 	 *
 	 * @param 		object 		$item 		Post object
 	 * @param 		array 		$meta 		The post metadata
@@ -156,9 +156,9 @@ class Mervis_CPTS_Templates {
 	} // loop_content_subtitle()
 
 	/**
-	 * Includes the plugin-name-title template
+	 * Includes the mervis-cpts-title template
 	 *
-	 * @hooked 		plugin-name-loop-content 		20
+	 * @hooked 		mervis-cpts-loop-content 		20
 	 *
 	 * @param 		object 		$item 		Post object
 	 * @param 		array 		$meta 		The post metadata
@@ -172,7 +172,7 @@ class Mervis_CPTS_Templates {
 	/**
 	 * Includes the content wrap start template file
 	 *
-	 * @hooked 		plugin-name-before-loop-content 		10
+	 * @hooked 		mervis-cpts-before-loop-content 		10
 	 *
 	 * @param 		object 		$item 		Post object
 	 * @param 		array 		$meta 		The post metadata

@@ -9,12 +9,12 @@ if ( empty( $images ) ) { return; }
 
 if ( array_key_exists( 'medium', $images['sizes'] ) ) {
 
-	$source = apply_filters( 'plugin-name-loop-image', $images['sizes']['medium']['url'], $images );
+	$source = apply_filters( 'mervis-cpts-loop-image', $images['sizes']['medium']['url'], $images );
 
 } else {
 
-	$source = apply_filters( 'plugin-name-loop-image', $images['sizes']['full']['url'], $images );
+	$source = apply_filters( 'mervis-cpts-loop-image', $images['sizes']['full']['url'], $images );
 
 }
 
-?><div class="plugin-name-loop-thumb" style="background-image:url(<?php echo esc_url( $source ); ?>)"></div>
+?><div class="mervis-cpts-loop-thumb" style="background-image:url(<?php echo esc_url( $source ); ?>)"></div>

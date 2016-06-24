@@ -13,25 +13,25 @@
  */
 
 /**
- * plugin-name-before-loop hook
+ * mervis-cpts-before-loop hook
  *
  * @hooked 		loop_wrap_start 		15
  */
-do_action( 'plugin-name-before-loop', $args );
+do_action( 'mervis-cpts-before-loop', $args );
 
 foreach ( $items as $item ) {
 
 	$meta = get_post_custom( $item->ID );
 
 	/**
-	 * plugin-name-before-loop-content hook
+	 * mervis-cpts-before-loop-content hook
 	 *
 	 * @param 		object  	$item 		The post object
 	 *
 	 * @hooked 		loop_content_wrap_begin 		10
 	 * @hooked 		loop_content_link_begin 		15
 	 */
-	do_action( 'plugin-name-before-loop-content', $item, $meta );
+	do_action( 'mervis-cpts-before-loop-content', $item, $meta );
 
 		/**
 		 * lazy-load-videos-loop-content hook
@@ -42,25 +42,25 @@ foreach ( $items as $item ) {
 		 * @hooked		loop_content_title 			15
 		 * @hooked		loop_content_subtitle 		20
 		 */
-		do_action( 'plugin-name-loop-content', $item, $meta );
+		do_action( 'mervis-cpts-loop-content', $item, $meta );
 
 	/**
-	 * plugin-name-after-loop-content hook
+	 * mervis-cpts-after-loop-content hook
 	 *
 	 * @param 		object  	$item 		The post object
 	 *
 	 * @hooked 		loop_content_link_end 		10
 	 * @hooked 		loop_content_wrap_end 		90
 	 */
-	do_action( 'plugin-name-after-loop-content', $item, $meta );
+	do_action( 'mervis-cpts-after-loop-content', $item, $meta );
 
 	unset( $meta );
 
 } // foreach
 
 /**
- * plugin-name-after-loop hook
+ * mervis-cpts-after-loop hook
  *
  * @hooked 		loop_wrap_end 			10
  */
-do_action( 'plugin-name-after-loop', $args );
+do_action( 'mervis-cpts-after-loop', $args );
