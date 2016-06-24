@@ -52,7 +52,7 @@ class Mervis_CPTS_Metaboxes {
 
 		add_meta_box(
 			'MERVIS_CPTS_metabox_name',
-			apply_filters( MERVIS_CPTS_SLUG . '-metabox-name-title', esc_html__( 'Metabox Name', 'plugin-name' ) ),
+			apply_filters( MERVIS_CPTS_SLUG . '-metabox-name-title', esc_html__( 'Metabox Name', 'mervis-cpts' ) ),
 			array( $this, 'metabox' ),
 			'posttypename',
 			'normal',
@@ -74,10 +74,10 @@ class Mervis_CPTS_Metaboxes {
 	 */
 	public function change_featured_image_labels( $labels ) {
 
-		$labels->featured_image 		= esc_html__( 'Featured Image', 'plugin-name' );
-		$labels->set_featured_image 	= esc_html__( 'Set featured image', 'plugin-name' );
-		$labels->remove_featured_image 	= esc_html__( 'Remove featured image', 'plugin-name' );
-		$labels->use_featured_image 	= esc_html__( 'Use as featured image', 'plugin-name' );
+		$labels->featured_image 		= esc_html__( 'Featured Image', 'mervis-cpts' );
+		$labels->set_featured_image 	= esc_html__( 'Set featured image', 'mervis-cpts' );
+		$labels->remove_featured_image 	= esc_html__( 'Remove featured image', 'mervis-cpts' );
+		$labels->use_featured_image 	= esc_html__( 'Use as featured image', 'mervis-cpts' );
 
 		return $labels;
 

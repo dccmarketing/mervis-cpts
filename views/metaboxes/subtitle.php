@@ -16,9 +16,9 @@ $atts 					= array();
 $atts['class'] 			= 'widefat';
 $atts['description'] 	= '';
 $atts['id'] 			= 'subtitle';
-$atts['label'] 			= __( 'Subtitle', 'plugin-name' );
+$atts['label'] 			= __( 'Subtitle', 'mervis-cpts' );
 $atts['name'] 			= 'subtitle';
-$atts['placeholder'] 	= __( 'Enter the subtitle', 'plugin-name' );
+$atts['placeholder'] 	= __( 'Enter the subtitle', 'mervis-cpts' );
 $atts['type'] 			= 'text';
 $atts['value'] 			= '';
 

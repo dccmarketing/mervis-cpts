@@ -10,4 +10,4 @@
  * @subpackage 	DocBlock/views
  */
 
-?><p><?php esc_html_e( '', 'plugin-name' ); ?></p>
+?><p><?php esc_html_e( '', 'mervis-cpts' ); ?></p>

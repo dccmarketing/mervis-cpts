@@ -67,8 +67,8 @@ class Mervis_CPTS_Admin {
 
 		add_submenu_page(
 			'edit.php?post_type=posttypename',
-			esc_html__( 'Plugin Name Settings', 'plugin-name' ),
-			esc_html__( 'Settings', 'plugin-name' ),
+			esc_html__( 'Plugin Name Settings', 'mervis-cpts' ),
+			esc_html__( 'Settings', 'mervis-cpts' ),
 			'manage_options',
 			MERVIS_CPTS_SLUG . '-settings',
 			array( $this, 'page_options' )
@@ -76,8 +76,8 @@ class Mervis_CPTS_Admin {
 
 		add_submenu_page(
 			'edit.php?post_type=posttypename',
-			esc_html__( 'Plugin Name Help', 'plugin-name' ),
-			esc_html__( 'Help', 'plugin-name' ),
+			esc_html__( 'Plugin Name Help', 'mervis-cpts' ),
+			esc_html__( 'Help', 'mervis-cpts' ),
 			'manage_options',
 			MERVIS_CPTS_SLUG . '-help',
 			array( $this, 'page_help' )
@@ -188,8 +188,8 @@ class Mervis_CPTS_Admin {
 		$defaults['class'] 			= 'text widefat';
 		$defaults['description'] 	= '';
 		$defaults['label'] 			= '';
-		$defaults['label-remove'] 	= esc_html__( 'Remove File', 'plugin-name' );
-		$defaults['label-upload'] 	= esc_html__( 'Upload/Choose File', 'plugin-name' );
+		$defaults['label-remove'] 	= esc_html__( 'Remove File', 'mervis-cpts' );
+		$defaults['label-upload'] 	= esc_html__( 'Upload/Choose File', 'mervis-cpts' );
 		$defaults['name'] 			= MERVIS_CPTS_SLUG . '-options[' . $args['id'] . ']';
 		$defaults['placeholder'] 	= '';
 		$defaults['type'] 			= 'text';
@@ -397,7 +397,7 @@ class Mervis_CPTS_Admin {
 	 */
 	public function link_settings( $links ) {
 
-		$links[] = sprintf( '<a href="%s">%s</a>', admin_url( 'edit.php?post_type=posttypename&page=mervis-cpts-settings' ), esc_html__( 'Settings', 'plugin-name' ) );
+		$links[] = sprintf( '<a href="%s">%s</a>', admin_url( 'edit.php?post_type=posttypename&page=mervis-cpts-settings' ), esc_html__( 'Settings', 'mervis-cpts' ) );
 
 		return $links;
 
@@ -460,12 +460,12 @@ class Mervis_CPTS_Admin {
 
 		add_settings_field(
 			'text-field',
-			apply_filters( MERVIS_CPTS_SLUG . '-label-text-field', esc_html__( 'Text Field', 'plugin-name' ) ),
+			apply_filters( MERVIS_CPTS_SLUG . '-label-text-field', esc_html__( 'Text Field', 'mervis-cpts' ) ),
 			array( $this, 'field_text' ),
 			MERVIS_CPTS_SLUG,
 			MERVIS_CPTS_SLUG . '-settingssection',
 			array(
-				'description' 	=> esc_html__( 'Text field description.', 'plugin-name' ),
+				'description' 	=> esc_html__( 'Text field description.', 'mervis-cpts' ),
 				'id' 			=> 'text-field',
 				'value' 		=> '',
 			)
@@ -473,15 +473,15 @@ class Mervis_CPTS_Admin {
 
 		add_settings_field(
 			'select-field',
-			apply_filters( MERVIS_CPTS_SLUG . '-label-select-field', esc_html__( 'Select Field', 'plugin-name' ) ),
+			apply_filters( MERVIS_CPTS_SLUG . '-label-select-field', esc_html__( 'Select Field', 'mervis-cpts' ) ),
 			array( $this, 'field_select' ),
 			MERVIS_CPTS_SLUG,
 			MERVIS_CPTS_SLUG . '-settingssection',
 			array(
-				'description' 	=> esc_html__( 'Select description.', 'plugin-name' ),
+				'description' 	=> esc_html__( 'Select description.', 'mervis-cpts' ),
 				'id' 			=> 'select-field',
 				'selections'	=> array(
-					array( 'label' => esc_html__( 'Label', 'plugin-name' ), 'value' => 'value' ),
+					array( 'label' => esc_html__( 'Label', 'mervis-cpts' ), 'value' => 'value' ),
 				),
 				'value' 		=> ''
 			)
@@ -489,24 +489,24 @@ class Mervis_CPTS_Admin {
 
 		add_settings_field(
 			'editor-field',
-			apply_filters( MERVIS_CPTS_SLUG . 'label-editor-field', esc_html__( 'Editor Field', 'plugin-name' ) ),
+			apply_filters( MERVIS_CPTS_SLUG . 'label-editor-field', esc_html__( 'Editor Field', 'mervis-cpts' ) ),
 			array( $this, 'field_editor' ),
 			MERVIS_CPTS_SLUG,
 			MERVIS_CPTS_SLUG . '-settingssection',
 			array(
-				'description' 	=> esc_html__( 'Editor field description.', 'plugin-name' ),
+				'description' 	=> esc_html__( 'Editor field description.', 'mervis-cpts' ),
 				'id' 			=> 'howtoapply'
 			)
 		);
 
 		add_settings_field(
 			'checkbox-field',
-			apply_filters( MERVIS_CPTS_SLUG . '-label-checkbox-field', esc_html__( 'Checkbox Field', 'plugin-name' ) ),
+			apply_filters( MERVIS_CPTS_SLUG . '-label-checkbox-field', esc_html__( 'Checkbox Field', 'mervis-cpts' ) ),
 			array( $this, 'field_checkbox' ),
 			MERVIS_CPTS_SLUG,
 			MERVIS_CPTS_SLUG . '-settingssection',
 			array(
-				'description' 	=> esc_html__( 'Checkbox description.', 'plugin-name' ),
+				'description' 	=> esc_html__( 'Checkbox description.', 'mervis-cpts' ),
 				'id' 			=> 'checkbox-field',
 				'value' 		=> '',
 			)
@@ -514,17 +514,17 @@ class Mervis_CPTS_Admin {
 
 		add_settings_field(
 			'radios-field',
-			apply_filters( MERVIS_CPTS_SLUG . '-label-radios-field', esc_html__( 'Radios Field', 'plugin-name' ) ),
+			apply_filters( MERVIS_CPTS_SLUG . '-label-radios-field', esc_html__( 'Radios Field', 'mervis-cpts' ) ),
 			array( $this, 'field_radios' ),
 			MERVIS_CPTS_SLUG,
 			MERVIS_CPTS_SLUG . '-settingssection',
 			array(
-				'description' 	=> esc_html__( 'Radio fields description.', 'plugin-name' ),
+				'description' 	=> esc_html__( 'Radio fields description.', 'mervis-cpts' ),
 				'id' 			=> 'radios-field',
 				'selections' 	=> array(
-					array( 'label' => esc_html__( 'Label 1', 'plugin-name' ), 'value' => 'value1' ),
-					array( 'label' => esc_html__( 'Label 2', 'plugin-name' ), 'value' => 'value2' ),
-					array( 'label' => esc_html__( 'Label 3', 'plugin-name' ), 'value' => 'value3' ),
+					array( 'label' => esc_html__( 'Label 1', 'mervis-cpts' ), 'value' => 'value1' ),
+					array( 'label' => esc_html__( 'Label 2', 'mervis-cpts' ), 'value' => 'value2' ),
+					array( 'label' => esc_html__( 'Label 3', 'mervis-cpts' ), 'value' => 'value3' ),
 				),
 				'value' 		=> '',
 			)
@@ -532,12 +532,12 @@ class Mervis_CPTS_Admin {
 
 		add_settings_field(
 			'textarea-field',
-			apply_filters( MERVIS_CPTS_SLUG . '-label-textarea-field', esc_html__( 'Textarea Field', 'plugin-name' ) ),
+			apply_filters( MERVIS_CPTS_SLUG . '-label-textarea-field', esc_html__( 'Textarea Field', 'mervis-cpts' ) ),
 			array( $this, 'field_textarea' ),
 			MERVIS_CPTS_SLUG,
 			MERVIS_CPTS_SLUG . '-settingssection',
 			array(
-				'description' 	=> esc_html__( 'Textarea description.', 'plugin-name' ),
+				'description' 	=> esc_html__( 'Textarea description.', 'mervis-cpts' ),
 				'id' 			=> 'textarea-field',
 				'value' 		=> '',
 			)
@@ -545,12 +545,12 @@ class Mervis_CPTS_Admin {
 
 		add_settings_field(
 			'file-upload-field',
-			apply_filters( MERVIS_CPTS_SLUG . '-label-file-upload-field', esc_html__( 'File Upload Field', 'plugin-name' ) ),
+			apply_filters( MERVIS_CPTS_SLUG . '-label-file-upload-field', esc_html__( 'File Upload Field', 'mervis-cpts' ) ),
 			array( $this, 'field_file_uploader' ),
 			MERVIS_CPTS_SLUG,
 			MERVIS_CPTS_SLUG . '-settingssection',
 			array(
-				'description' 	=> esc_html__( 'File uploader description.', 'plugin-name' ),
+				'description' 	=> esc_html__( 'File uploader description.', 'mervis-cpts' ),
 				'id' 			=> 'file-upload-field',
 				'value' 		=> '',
 			)
@@ -567,7 +567,7 @@ class Mervis_CPTS_Admin {
 
 		add_settings_section(
 			MERVIS_CPTS_SLUG . '-settingssection',
-			apply_filters( MERVIS_CPTS_SLUG . '-section-settingssection-title', esc_html__( 'Settings Section', 'plugin-name' ) ),
+			apply_filters( MERVIS_CPTS_SLUG . '-section-settingssection-title', esc_html__( 'Settings Section', 'mervis-cpts' ) ),
 			array( $this, 'section_settingssection' ),
 			MERVIS_CPTS_SLUG
 		);
@@ -636,7 +636,7 @@ class Mervis_CPTS_Admin {
 
 			if ( $valid[$option[0]] != $input[$option[0]] ) {
 
-				add_settings_error( $option[0], $option[0] . '_error', esc_html__( $option[0] . ' error.', 'plugin-name' ), 'error' );
+				add_settings_error( $option[0], $option[0] . '_error', esc_html__( $option[0] . ' error.', 'mervis-cpts' ), 'error' );
 
 			}
 
