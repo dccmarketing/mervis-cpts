@@ -62,7 +62,7 @@ class Mervis_CPTS_Mervis_CPTS {
 
 		$this->load_dependencies();
 		$this->set_locale();
-		//$this->define_admin_hooks();
+		$this->define_admin_hooks();
 		//$this->define_public_hooks();
 		//$this->define_template_hooks();
 		//$this->define_metabox_hooks();
@@ -112,14 +112,8 @@ class Mervis_CPTS_Mervis_CPTS {
 
 		$plugin_admin = new Mervis_CPTS_Admin();
 
-		$this->loader->action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
-		$this->loader->action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
-		$this->loader->action( 'admin_init', $plugin_admin, 'register_fields' );
-		$this->loader->action( 'admin_init', $plugin_admin, 'register_sections' );
-		$this->loader->action( 'admin_init', $plugin_admin, 'register_settings' );
-		$this->loader->action( 'admin_menu', $plugin_admin, 'add_menu' );
-		$this->loader->action( 'plugin_action_links_' . MERVIS_CPTS_FILE, $plugin_admin, 'link_settings' );
-		$this->loader->action( 'plugin_row_meta', $plugin_admin, 'link_row_meta', 10, 2 );
+		$this->loader->action( 'init', $plugin_admin, 'change_post_object_to_news' );
+		$this->loader->filter( 'soliloquy_post_type_labels', $plugin_admin, 'relabel_soliloquy_to_sliders' );
 
 	} // define_admin_hooks()
 
@@ -146,6 +140,12 @@ class Mervis_CPTS_Mervis_CPTS {
 		$plugin_tax_projectcat = new Mervis_CPTS_Tax_ProjectCat();
 
 		$this->loader->action( 'init', $plugin_tax_projectcat, 'new_taxonomy_projectcat' );
+
+
+
+		$plugin_tax_loccat = new Mervis_CPTS_Tax_LocationCategory();
+
+		$this->loader->action( 'init', $plugin_tax_loccat, 'new_taxonomy_locationcategory' );
 
 	} // define_cpt_and_tax_hooks()
 
